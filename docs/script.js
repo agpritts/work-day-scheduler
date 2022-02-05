@@ -1,4 +1,4 @@
-var timeArray = ["8:00 AM", "9:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM", "5:00 PM", "6:00 PM"]
+var timeArray = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"]
 var tasks = $("textarea");
 var saveBtn = $(".saveBtn")
 var displayTime = function() {
@@ -24,6 +24,9 @@ $("textarea").each(function(index) {
     else {
         $(this).addClass("future")
     }
+    /* var loadTask = localStorage.getItem($(this).data("hour"));
+    console.log(loadTask);
+    $(this).text(loadTask); */
 });
 
 var saveTasks = function(event) {
