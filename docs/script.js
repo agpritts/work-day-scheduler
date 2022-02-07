@@ -12,22 +12,6 @@ $(document).ready(function() {
     loadTask();
 });
 
-$("h4").each(function(index) {
-    $(this).text(timeArray[index]);
-});
-
-$("textarea").each(function(index) {
-    if (index + 8 < moment().hours()) {
-        $(this).addClass("past")
-    }
-    else if (index + 8 === moment().hours()) {
-        $(this).addClass("present")
-    }
-    else {
-        $(this).addClass("future")
-    }
-});
-
 var loadTask = function() {
     var storage = window.localStorage
     storage.getItem($)
@@ -43,5 +27,21 @@ var saveTasks = function(event) {
     event.preventDefault();
     localStorage.setItem($(this).siblings("h4").attr("id"), $(this).siblings("textarea").val());
 };
+
+$("h4").each(function(index) {
+    $(this).text(timeArray[index]);
+});
+
+$("textarea").each(function(index) {
+    if (index + 8 < moment().hours()) {
+        $(this).addClass("past")
+    }
+    else if (index + 8 === moment().hours()) {
+        $(this).addClass("present")
+    }
+    else {
+        $(this).addClass("future")
+    }
+});
 
 saveBtn.on("click", saveTasks);
