@@ -1,5 +1,5 @@
-var timeArray = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"]
-var tasks = $("textarea");
+var timeValues = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"]
+var tasks = $("textarea")
 var saveBtn = $(".saveBtn")
 
 var displayTime = function() {
@@ -9,10 +9,10 @@ var displayTime = function() {
 
 $(document).ready(function() {
     displayTime();
-    loadTask();
+    loadTasks();
 });
 
-var loadTask = function() {
+var loadTasks = function() {
     var storage = window.localStorage
     storage.getItem($)
     for (var i = 0; i < storage.length; i++) {
@@ -29,7 +29,7 @@ var saveTasks = function(event) {
 };
 
 $("h4").each(function(index) {
-    $(this).text(timeArray[index]);
+    $(this).text(timeValues[index]);
 });
 
 $("textarea").each(function(index) {
