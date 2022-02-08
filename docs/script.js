@@ -33,10 +33,10 @@ $("h4").each(function(index) {
 });
 
 $("textarea").each(function(index) {
-    if (index + 8 < moment().hours()) {
+    if (index + 9 < moment().hours()) {
         $(this).addClass("past")
     }
-    else if (index + 8 === moment().hours()) {
+    else if (index + 9 === moment().hours()) {
         $(this).addClass("present")
     }
     else {
