@@ -1,4 +1,4 @@
-# Challenge 5: Work Day Scheduler
+# 🗓 Work Day Scheduler
 
 ## Work Done
 Built in-browser 9AM-5PM scheduler quiz using HTML, CSS, and JavaScript </br>
